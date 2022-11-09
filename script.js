@@ -14,6 +14,9 @@ function addBookToLibrary(book) {
     myLibrary.push(book);
 }
 
+function displayBooks() {
+}
+
 addBookToLibrary(new Book('Crime and Punishment', 'Fyodor Dostoevsky', 671, false));
 addBookToLibrary(new Book('The Plague', 'Albert Camus', 308, false));
 addBookToLibrary(new Book('The Divine Comedy', 'Dante Alighieri', 798, false));
