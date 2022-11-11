@@ -7,10 +7,10 @@ function Book(title, author, pages, read) {
   this.author = author
   this.pages = pages
   this.read = read
-  // turn this into a prototype function later...
-  this.info = function() {
-    return `Title: ${title}, Author: ${author}, Pages: ${pages}, Read: ${read}`
-  }
+}
+
+Book.prototype.info = function() {
+    return `Title: ${this.title}, Author: ${this.author}, Pages: ${this.pages}, Read: ${this.read}`
 }
 
 // Add book to library array
