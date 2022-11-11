@@ -14,7 +14,8 @@ Book.prototype.info = function() {
 }
 
 // Add book to library array
-function addBookToLibrary(book) {
+function addBookToLibrary(title, author, pages, readStatus) {
+  const book = new Book(title, author, pages, readStatus)
   myLibrary.push(book);
 }
 
@@ -26,10 +27,10 @@ function displayBooks() {
 }
 
 // Add example books
-addBookToLibrary(new Book('Crime and Punishment', 'Fyodor Dostoevsky', 671, false));
-addBookToLibrary(new Book('The Plague', 'Albert Camus', 308, false));
-addBookToLibrary(new Book('The Divine Comedy', 'Dante Alighieri', 798, false));
-addBookToLibrary(new Book('Kafka on the Shore', 'Haruki Murakami', 467, true));
-addBookToLibrary(new Book('Hyperion', 'Dan Simmons', 500, true));
+addBookToLibrary('Crime and Punishment', 'Fyodor Dostoevsky', 671, false);
+addBookToLibrary('The Plague', 'Albert Camus', 308, false);
+addBookToLibrary('The Divine Comedy', 'Dante Alighieri', 798, false);
+addBookToLibrary('Kafka on the Shore', 'Haruki Murakami', 467, true);
+addBookToLibrary('Hyperion', 'Dan Simmons', 500, true);
 
 displayBooks();
