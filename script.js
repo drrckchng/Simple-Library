@@ -41,9 +41,12 @@ function displayBooks() {
 }
 
 const submitButton = document.getElementById("submit");
+// submitButton.preventDefault();
 
 submitButton.addEventListener("click", function () {
-  console.log("clicked");
+  const userTitle = document.getElementById("book-title");
+  const userAuthor = document.getElementById("author-name");
+  const userPages = document.getElementById("pages");
 })
 
 
