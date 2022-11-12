@@ -33,14 +33,20 @@ function displayBooks() {
       if(element.hasOwnProperty(key)) {
         const div = document.createElement("div");
         div.textContent = element[key];
-        console.log(element[key]);
-        console.log('test');
         card.appendChild(div);
       }
     }
     cardWrapper.append(card);
   });
 }
+
+const submitButton = document.getElementById("submit");
+
+submitButton.addEventListener("click", function () {
+  console.log("clicked");
+})
+
+
 
 // Add example books
 addBook("Crime and Punishment", "Fyodor Dostoevsky", 671, false);
