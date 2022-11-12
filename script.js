@@ -44,9 +44,10 @@ const submitButton = document.getElementById("submit");
 // submitButton.preventDefault();
 
 submitButton.addEventListener("click", function () {
-  const userTitle = document.getElementById("book-title");
-  const userAuthor = document.getElementById("author-name");
-  const userPages = document.getElementById("pages");
+  const userTitle = document.getElementById("book-title").value;
+  const userAuthor = document.getElementById("author-name").value;
+  const userPages = document.getElementById("pages").value;
+  console.log("test");
 })
 
 
