@@ -52,22 +52,28 @@ function displayBooks() {
   });
 }
 
+
 // Grab submit button and add click listener
 const submitButton = document.getElementById("submit");
 submitButton.addEventListener("click", userInput);
 
 // Function to run on button click
 function userInput(event) {
+  newUserBook();
+  event.preventDefault(); // Prevents form from being submitted
+}
+
+function newUserBook() {
   const userTitle = document.getElementById("book-title").value;
   const userAuthor = document.getElementById("author-name").value;
   const userPages = document.getElementById("pages").value;
   const read = document.getElementById("read").checked;
+  const notRead = document.getElementById("not-read").checked;
   let readStatus = false;
   if (read === true) {
     readStatus = true;
   }
   addBook(userTitle, userAuthor, userPages, readStatus);
-  event.preventDefault(); // Prevents form from being submitted
 }
 
 // Add example books
