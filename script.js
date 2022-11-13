@@ -20,6 +20,18 @@ function addBook(title, author, pages, readStatus) {
   myLibrary.push(book);
 }
 
+// Select all books and returns them in an array
+function selectBooks() {
+  return document.querySelectorAll(".card");
+}
+
+// Clear listed books
+function clearBooks() {
+  selectBooks().forEach(book => {
+    book.remove();
+  });
+}
+
 // Display each book
 function displayBooks() {
   const cardWrapper = document.getElementById("card-wrapper")
@@ -40,20 +52,12 @@ function displayBooks() {
   });
 }
 
-function clearBooks() {
-  selectBooks().forEach(book => {
-    book.remove();
-  });
-}
-
-function selectBooks() {
-  return document.querySelectorAll(".card");
-}
-
+// Grab submit button and add click listener
 const submitButton = document.getElementById("submit");
-// submitButton.preventDefault();
+submitButton.addEventListener("click", userInput);
 
-submitButton.addEventListener("click", function () {
+// Function to run on button click
+function userInput(event) {
   const userTitle = document.getElementById("book-title").value;
   const userAuthor = document.getElementById("author-name").value;
   const userPages = document.getElementById("pages").value;
@@ -63,9 +67,8 @@ submitButton.addEventListener("click", function () {
     readStatus = true;
   }
   addBook(userTitle, userAuthor, userPages, readStatus);
-});
-
-
+  event.preventDefault(); // Prevents form from being submitted
+}
 
 // Add example books
 addBook("Crime and Punishment", "Fyodor Dostoevsky", 671, false);
