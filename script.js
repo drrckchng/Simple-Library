@@ -47,8 +47,8 @@ submitButton.addEventListener("click", function () {
   const userTitle = document.getElementById("book-title").value;
   const userAuthor = document.getElementById("author-name").value;
   const userPages = document.getElementById("pages").value;
-  const readStatus = document.getElementById("read").checked;
-  const notReadStatus = document.getElementById("not-read").checked;
+  const read = document.getElementById("read").checked;
+  const notRead = document.getElementById("not-read").checked;
 })
 
 
