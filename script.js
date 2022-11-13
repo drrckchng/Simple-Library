@@ -48,8 +48,12 @@ submitButton.addEventListener("click", function () {
   const userAuthor = document.getElementById("author-name").value;
   const userPages = document.getElementById("pages").value;
   const read = document.getElementById("read").checked;
-  const notRead = document.getElementById("not-read").checked;
-})
+  let readStatus = false;
+  if (read === true) {
+    readStatus = true;
+  }
+  addBook(userTitle, userAuthor, userPages, readStatus);
+});
 
 
 
