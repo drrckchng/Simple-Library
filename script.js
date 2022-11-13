@@ -40,6 +40,16 @@ function displayBooks() {
   });
 }
 
+function clearBooks() {
+  selectBooks().forEach(book => {
+    book.remove();
+  });
+}
+
+function selectBooks() {
+  return document.querySelectorAll(".card");
+}
+
 const submitButton = document.getElementById("submit");
 // submitButton.preventDefault();
 
