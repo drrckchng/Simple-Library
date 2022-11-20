@@ -14,45 +14,6 @@ Book.prototype.info = function() {
     return `Title: ${this.title}, Author: ${this.author}, Pages: ${this.pages}, Read: ${this.read}`
 }
 
-// Add book to library array
-function addBook(title, author, pages, readStatus) {
-  const book = new Book(title, author, pages, readStatus)
-  myLibrary.push(book);
-}
-
-// Select all books and returns them in an array
-function selectBooks() {
-  return document.querySelectorAll(".card");
-}
-
-// Clear listed books
-function clearBooks() {
-  selectBooks().forEach(book => {
-    book.remove();
-  });
-}
-
-// Display each book
-function displayBooks() {
-  const cardWrapper = document.getElementById("card-wrapper")
-  myLibrary.forEach(element => {
-    const card = document.createElement("div");
-    card.classList.add("card");
-
-    // loop through keys in each Book object
-    for(const key in element) {
-      // ignore info() method
-      if(element.hasOwnProperty(key)) {
-        const div = document.createElement("div");
-        div.textContent = element[key];
-        card.appendChild(div);
-      }
-    }
-    cardWrapper.append(card);
-  });
-}
-
-
 // Grab submit button and add click listener
 const submitButton = document.getElementById("submit");
 submitButton.addEventListener("click", userInput);
@@ -99,6 +60,44 @@ function checkForm(title, author, pages, read, notRead) {
   } else {
     return false;
   }
+}
+
+// Add book to library array
+function addBook(title, author, pages, readStatus) {
+  const book = new Book(title, author, pages, readStatus)
+  myLibrary.push(book);
+}
+
+// Select all books and returns them in an array
+function selectBooks() {
+  return document.querySelectorAll(".card");
+}
+
+// Clear listed books
+function clearBooks() {
+  selectBooks().forEach(book => {
+    book.remove();
+  });
+}
+
+// Display each book
+function displayBooks() {
+  const cardWrapper = document.getElementById("card-wrapper")
+  myLibrary.forEach(element => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    // loop through keys in each Book object
+    for(const key in element) {
+      // ignore info() method
+      if(element.hasOwnProperty(key)) {
+        const div = document.createElement("div");
+        div.textContent = element[key];
+        card.appendChild(div);
+      }
+    }
+    cardWrapper.append(card);
+  });
 }
 
 // Add example books
