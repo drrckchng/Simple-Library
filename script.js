@@ -14,6 +14,7 @@ Book.prototype.info = function() {
     return `Title: ${this.title}, Author: ${this.author}, Pages: ${this.pages}, Read: ${this.read}`
 }
 
+
 // Grab submit button and add click listener
 const submitButton = document.getElementById("submit");
 submitButton.addEventListener("click", userInput);
@@ -50,11 +51,10 @@ function newUserBook() {
 function checkForm(title, author, pages, read, notRead) {
   // If all form elements are valid (not empty) return true
   // Else, return false
-  if(
-    title !== ""
+  if(title !== ""
     && author !== ""
     && pages !== ""
-    && (read === false && notRead === true) || (read === true && notRead === false)
+    && ((read === false && notRead === true) || (read === true && notRead === false))
   ) {
     return true;
   } else {
