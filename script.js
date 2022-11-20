@@ -87,6 +87,7 @@ function displayBooks() {
     const card = document.createElement("div");
     card.classList.add("card");
 
+    // Display attributes
     // loop through keys in each Book object
     for(const key in element) {
       // ignore info() method
@@ -96,6 +97,11 @@ function displayBooks() {
         card.appendChild(div);
       }
     }
+
+    // Add buttons
+    const deleteButton = document.createElement("button");
+    const readStatusButton = document.createElement("button");
+
     cardWrapper.append(card);
   });
 }
