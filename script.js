@@ -63,22 +63,6 @@ function userInput(event) {
   event.preventDefault(); // Prevents form from being submitted
 }
 
-// Verify valid form entry
-function checkForm(title, author, pages, read, notRead) {
-  // If all form elements are valid (not empty) return true
-  // Else, return false
-  if(
-    title !== ""
-    && author !== ""
-    && pages !== ""
-    && (read === false && notRead === true) || (read === true && notRead === false)
-  ) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
 // Function that is run upon submit click
 function newUserBook() {
   const userTitle = document.getElementById("book-title").value;
@@ -98,6 +82,22 @@ function newUserBook() {
     displayBooks();
   } else {
     console.log("Error in form");
+  }
+}
+
+// Verify valid form entry
+function checkForm(title, author, pages, read, notRead) {
+  // If all form elements are valid (not empty) return true
+  // Else, return false
+  if(
+    title !== ""
+    && author !== ""
+    && pages !== ""
+    && (read === false && notRead === true) || (read === true && notRead === false)
+  ) {
+    return true;
+  } else {
+    return false;
   }
 }
 
