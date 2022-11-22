@@ -14,6 +14,18 @@ Book.prototype.info = function() {
     return `Title: ${this.title}, Author: ${this.author}, Pages: ${this.pages}, Read: ${this.read}`
 }
 
+Book.prototype.setIndex = function(i) {
+  this.index = i
+}
+
+function setArrayIndex() {
+  let i = 0;
+  myLibrary.forEach(function(object) {
+    object.setIndex(i);
+    i++;
+  });
+}
+
 
 // Grab submit button and add click listener
 const submitButton = document.getElementById("submit");
