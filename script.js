@@ -53,8 +53,7 @@ function newUserBook() {
       readStatus = true;
     }
     addBook(userTitle, userAuthor, userPages, readStatus);
-    clearBooks();
-    displayBooks();
+    updateDisplay();
   } else {
     console.log("Error in form");
   }
@@ -132,6 +131,13 @@ function displayBooks() {
   });
 }
 
+// Group function calls
+function updateDisplay() {
+  clearBooks();
+  setArrayIndex();
+  displayBooks();
+}
+
 // Add example books
 addBook("Crime and Punishment", "Fyodor Dostoevsky", 671, false);
 addBook("The Plague", "Albert Camus", 308, false);
@@ -139,4 +145,4 @@ addBook("The Divine Comedy", "Dante Alighieri", 798, false);
 addBook("Kafka on the Shore", "Haruki Murakami", 467, true);
 addBook("Hyperion", "Dan Simmons", 500, true);
 
-displayBooks();
+updateDisplay();
