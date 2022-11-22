@@ -14,10 +14,12 @@ Book.prototype.info = function() {
     return `Title: ${this.title}, Author: ${this.author}, Pages: ${this.pages}, Read: ${this.read}`
 }
 
+// Setter for index attribute
 Book.prototype.setIndex = function(i) {
   this.index = i
 }
 
+// Function that will set index attribute of all Book objects
 function setArrayIndex() {
   let i = 0;
   myLibrary.forEach(function(object) {
@@ -25,7 +27,6 @@ function setArrayIndex() {
     i++;
   });
 }
-
 
 // Grab submit button and add click listener
 const submitButton = document.getElementById("submit");
