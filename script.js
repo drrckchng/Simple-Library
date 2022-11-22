@@ -115,6 +115,19 @@ function displayBooks() {
     const deleteButton = document.createElement("button");
     const readStatusButton = document.createElement("button");
 
+    // Set ID
+    deleteButton.setAttribute("id", "delete-button");
+    readStatusButton.setAttribute("id", "set-attribute");
+
+    // Set text content of buttons
+    deleteButton.textContent = "Delete";
+    readStatusButton.textContent = "Read";
+
+    // Append buttons to card
+    card.appendChild(deleteButton);
+    card.appendChild(readStatusButton);
+
+    // Append cards to card wrapper div
     cardWrapper.append(card);
   });
 }
