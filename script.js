@@ -114,8 +114,13 @@ function displayBooks() {
           card.appendChild(deleteButton);
         } else if(key === "read") {
           const readButton = document.createElement("button");
-          // Add conditional to check if book is read or not
-          readButton.textContent = "Read";
+          if(element.read === true) {
+            readButton.textContent = "Read";
+            readButton.classList.add("book-read");
+          } else {
+            readButton.textContent = "Not Read";
+            readButton.classList.add("book-not-read");
+          }
           readButton.addEventListener("click", function() {
             console.log("toggle read status " + element.index);
           });
