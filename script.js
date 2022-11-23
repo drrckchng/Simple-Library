@@ -104,26 +104,35 @@ function displayBooks() {
     for(const key in element) {
       // ignore info() method
       if(element.hasOwnProperty(key)) {
-        const div = document.createElement("div");
-        div.textContent = element[key];
-        card.appendChild(div);
+        if(key === "index") {
+          const deleteButton = document.createElement("button");
+          deleteButton.textContent = "Delete";
+          deleteButton.addEventListener("click", function() {
+            console.log("delete index " + element.index);
+          });
+          card.appendChild(deleteButton);
+        } else {
+          const div = document.createElement("div");
+          div.textContent = element[key];
+          card.appendChild(div);
+        }
       }
     }
 
     // Add buttons
-    const deleteButton = document.createElement("button");
+    // const deleteButton = document.createElement("button");
     const readStatusButton = document.createElement("button");
 
     // Set ID
-    deleteButton.setAttribute("id", "delete-button");
+    // deleteButton.setAttribute("id", "delete-button");
     readStatusButton.setAttribute("id", "set-attribute");
 
     // Set text content of buttons
-    deleteButton.textContent = "Delete";
+    // deleteButton.textContent = "Delete";
     readStatusButton.textContent = "Read";
 
     // Append buttons to card
-    card.appendChild(deleteButton);
+    // card.appendChild(deleteButton);
     card.appendChild(readStatusButton);
 
     // Append cards to card wrapper div
