@@ -1,3 +1,7 @@
+* {
+  font-family: 'Robot', sans-serif;
+}
+
 .card {
   border: black solid 1px;
 }
