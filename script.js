@@ -55,7 +55,7 @@ function newUserBook() {
     addBook(userTitle, userAuthor, userPages, readStatus);
     updateDisplay();
   } else {
-    console.log("Error in form");
+    alert("Form is not complete!");
   }
 }
 
