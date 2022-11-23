@@ -111,31 +111,21 @@ function displayBooks() {
             console.log("delete index " + element.index);
           });
           card.appendChild(deleteButton);
+        } else if(key === "read") {
+          const readButton = document.createElement("button");
+          // Add conditional to check if book is read or not
+          readButton.textContent = "Read";
+          readButton.addEventListener("click", function() {
+            console.log("toggle read status " + element.index);
+          });
+          card.appendChild(readButton);
         } else {
           const div = document.createElement("div");
-          div.textContent = element[key];
+          div.textContent = key + ": " + element[key];
           card.appendChild(div);
         }
       }
     }
-
-    // Add buttons
-    // const deleteButton = document.createElement("button");
-    const readStatusButton = document.createElement("button");
-
-    // Set ID
-    // deleteButton.setAttribute("id", "delete-button");
-    readStatusButton.setAttribute("id", "set-attribute");
-
-    // Set text content of buttons
-    // deleteButton.textContent = "Delete";
-    readStatusButton.textContent = "Read";
-
-    // Append buttons to card
-    // card.appendChild(deleteButton);
-    card.appendChild(readStatusButton);
-
-    // Append cards to card wrapper div
     cardWrapper.append(card);
   });
 }
