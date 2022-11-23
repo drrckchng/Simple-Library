@@ -132,7 +132,8 @@ function displayBooks() {
           card.appendChild(readButton);
         } else {
           const div = document.createElement("div");
-          div.textContent = key + ": " + element[key];
+          const infoCapitalized = key.charAt(0).toUpperCase() + key.slice(1);
+          div.textContent = infoCapitalized + ": " + element[key];
           card.appendChild(div);
         }
       }
