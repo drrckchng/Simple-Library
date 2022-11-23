@@ -28,11 +28,20 @@
     pointer-events: auto;
     opacity: 1;
 }
+
 .card {
   border: black solid 1px;
+  width: 400px;
 }
 
-.book-read{
+#card-wrapper {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.book-read {
 
 }
 
