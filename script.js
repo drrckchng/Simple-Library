@@ -122,7 +122,12 @@ function displayBooks() {
             readButton.classList.add("book-not-read");
           }
           readButton.addEventListener("click", function() {
-            console.log("toggle read status " + element.index);
+            if(element.read === true) {
+              element.read = false;
+            } else {
+              element.read = true;
+            }
+            updateDisplay();
           });
           card.appendChild(readButton);
         } else {
