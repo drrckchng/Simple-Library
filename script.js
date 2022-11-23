@@ -108,7 +108,8 @@ function displayBooks() {
           const deleteButton = document.createElement("button");
           deleteButton.textContent = "Delete";
           deleteButton.addEventListener("click", function() {
-            console.log("delete index " + element.index);
+            myLibrary.splice(element.index, 1);
+            updateDisplay();
           });
           card.appendChild(deleteButton);
         } else if(key === "read") {
