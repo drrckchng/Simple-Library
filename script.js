@@ -28,12 +28,22 @@ function setArrayIndex() {
   });
 }
 
+// Grab book submit form
+const bookForm = document.getElementById("submit-form");
+
+// Grab add book button and add click listener
+const addBookButton = document.getElementById("add-book");
+addBookButton.addEventListener("click", function() {
+  bookForm.classList.add("show");
+})
+
 // Grab submit button and add click listener
 const submitButton = document.getElementById("submit");
 submitButton.addEventListener("click", userInput);
 
 // Function to run on button click
 function userInput(event) {
+  bookForm.classList.remove("show");
   newUserBook();
   event.preventDefault(); // Prevents form from being submitted
 }
