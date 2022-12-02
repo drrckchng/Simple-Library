@@ -117,6 +117,7 @@ function displayBooks() {
         if(key === "index") {
           const deleteButton = document.createElement("button");
           deleteButton.textContent = "Delete";
+          deleteButton.classList.add("delete-button");
           deleteButton.addEventListener("click", function() {
             myLibrary.splice(element.index, 1);
             updateDisplay();
