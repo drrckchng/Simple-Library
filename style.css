@@ -39,6 +39,12 @@
   border: black solid 1px;
   width: 250px;
   font-size: 16px;
+  padding: 15px;
+  text-align: center;
+}
+
+.card div:nth-child(3) {
+  margin-bottom: 12px;
 }
 
 #card-wrapper {
