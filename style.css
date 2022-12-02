@@ -1,5 +1,10 @@
 * {
-  font-family: 'Robot', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
 }
 
 .wrapper {
@@ -55,6 +60,7 @@
 
 .card button {
   margin: 5px;
+  padding: 10px;
 }
 
 #card-wrapper {
