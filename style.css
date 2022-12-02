@@ -71,7 +71,20 @@ button {
   padding: 10px;
 }
 
-.delete-button {
+.card button:hover {
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background: red;
+}
+
+.book-read:hover {
+  background: red;
+}
+
+.book-not-read:hover {
+  background: green;
 }
 
 #card-wrapper {
@@ -81,10 +94,3 @@ button {
   flex-wrap: wrap;
 }
 
-.book-read {
-
-}
-
-.book-not-read {
-
-}
